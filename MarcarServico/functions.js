@@ -13,11 +13,6 @@ let sidebar = document.querySelector(".sidebar");
     menuBtnChange(); //calling the function(optional)
   });
 
-  iconBtn.addEventListener("click",()=>{
-    iconBtn.classList.toggle("pressed");
-    optionPressed(); //makes the colour change for the selected option
-
-  });
 
   // following are the code to change sidebar button(optional)
   function menuBtnChange() {
@@ -26,4 +21,21 @@ let sidebar = document.querySelector(".sidebar");
    }else {
      closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
    }
-  }
+  };
+
+
+  const selected = document.querySelector(".selected");
+  const optionsContainer = document.querySelector(".options-container");
+  
+  const optionsList = document.querySelectorAll(".option");
+  
+  selected.addEventListener("click", () => {
+    optionsContainer.classList.toggle("active");
+  });
+  
+  optionsList.forEach(o => {
+    o.addEventListener("click", () => {
+      selected.innerHTML = o.querySelector("label").innerHTML;
+      optionsContainer.classList.remove("active");
+    });
+  });
