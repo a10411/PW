@@ -1,57 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <title>Escolher e marcar servico</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <!-- Fontawesome CDN Link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-    <body>
-        <form action="#">
-            <div class="section">
-                <div class="top_navbar">
-                          <div class="user_name"> 
-                            Pedro Simoes
-                        </div> 
-                        <div class="user_icon"> 
-                            <img src="images/gajo.jpg" class="img_perfil">
-                        </div>
-                </div>
-            </div>
-            <div class="sidebar">
-                <img src="images/logo.svg" class="logo">
-                <ul>
-                    <li>
-                        <a href="http://127.0.0.1:3002/index.html" class="active">
-                            <span class="item">Inicio</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://127.0.0.1:3002/gerirAnimais.html">
-                            <span class="item">Gerir Animais</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://127.0.0.1:3002/servicos.html">
-                            <span class="item">Serviços</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://127.0.0.1:3002/escolas.html">
-                            <span class="item">Escolas</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://127.0.0.1:3002/hoteis.html">
-                            <span class="item">Hoteis</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </form>
-        <script src="functions.js"></script>
-    </body>
+<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!--<title> Responsive Sidebar Menu  | CodingLab </title>-->
+    <link rel="stylesheet" href="style.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+        <div class="logo_name">
+          <img src="images/logo.svg"> 
+        </div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+        <i class='bx bx-search' ></i>
+        <input type="text" placeholder="Pesquisar...">    
+        <span class="tooltip">Pesquisar</span>
+      </li>
+      <li>
+        <a href="index.html">
+          <i class='bx bxs-home'></i>
+          <span class="links_name">Início</span>
+      </a>
+      <span class="tooltip">Página inicial</span>
+      </li>
+     <li>
+      <a href="servicos.html">
+        <i class='bx bx-list-ul'></i>
+        <span class="links_name">Serviços</span>
+      </a>
+      <span class="tooltip">Serviços</span>
+     </li>
+     <li>
+      <a href="animais.html">
+        <i class='bx bxs-cat' ></i>
+        <span class="links_name">Animais</span>
+      </a>
+      <span class="tooltip">Animais</span>
+    </li>
+     <li>
+      <a class="active" href="hoteis.html">
+        <i class='bx bxs-hotel' ></i>
+        <span class="links_name">Hotéis</span>
+      </a>
+      <span class="tooltip">Hotéis</span>
+     </li>
+     <li>
+      <a href="escolas.html">
+        <i class='bx bxs-graduation' ></i>
+        <span class="links_name"> Escolas</span>
+      </a>
+      <span class="tooltip">Escolas</span>
+     </li>
+     <li class="profile">
+         <div class="profile-details">
+           <img src="images/gajo.jpg"  alt="profileImg">
+           <div class="name_job">
+             <div class="name">Pedro Simoes</div>
+           </div>
+         </div>
+         <i class='bx bx-log-out' id="log_out" ></i>
+     </li>
+    </ul>
+  </div>
+  <section class="home-section">
+      <div class="text">Hotéis</div>
+  </section>
+  <script src="functions.js"></script>
+</body>
 </html>
